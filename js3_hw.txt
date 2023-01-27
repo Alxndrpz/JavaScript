@@ -1,0 +1,75 @@
+HW JS_functions
+1) Сделать функцию которая при вызове напишет в консоль сумму 2-х переданных в неё чисел
+
+function sum(num1, num2){
+   return num1 + num2;
+}
+console.log(sum(5, 8));
+_____________________________
+
+
+2) Сделать функцию которая вернёт в консоль квадрат переданного числа
+
+function sqrt(num){
+  return Math.sqrt(num);
+}
+console.log(sqrt(9));
+_____________________________
+
+
+3) Сделать функцию. На вход принимет 3 параметра (Ф,И,О). Вернёт JSON
+{"name":И,
+ "surname":Ф,
+ "middlename":О}
+
+arr = ['Alexandra', 'Poznyak', 'Yurievna'];
+function json(){
+   for (i = 0; i < arr.length; i++){
+    console.log(JSON.stringify({name1: arr[i]}, i++));
+    console.log(JSON.stringify({surname: arr[i]}, i++));
+    console.log(JSON.stringify({middlename: arr[i]}));
+    break;
+   }
+ }
+console.log(json());
+_______________________________
+
+4) вывести в консоль переменную-массив в которой будут все чётные числа. Переменную возвращяет функция которая на вход принимает массив чисел.
+Если чётных чисел не нашлось, то функция вернёт текст "No even numbers"
+
+arr = [7, 9, 5, 4, 6, 6, 3, 8];
+function evenNum(){
+  let nums = [];
+  for (i = 0; i < arr.length; i++){
+    if (arr[i] % 2 === 0){
+      nums.push(arr[i]);
+    }
+  }
+  return nums.join(', ');
+}
+console.log(evenNum()); 
+_________________________________
+
+5) Сделать функцию которая вернёт количество букв 'a' в переданном в неё слове.
+Алфавит Eng. Если нету букв 'а', то вернтуть текст "No a characters".
+
+1.  console.log("alabama".split('a').length - 1);
+
+2.  let str = 'alabama'
+    number = 0;
+    for (let i = 0; i < str.length; i++){
+     if(str[i] == 'a') number++;
+    }
+    console.log('amount =  ' + number);
+________________________________
+
+
+6) Написать функцию которая выдаст список тестов для переданного в неё web-ui элемента
+Элементы: Phone number field, CheckBox, SignIn Button.
+7) Написать функцию которая на вход получает JSON а возвращяет XML
+
+
+
+
+
+
