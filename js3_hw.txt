@@ -66,7 +66,23 @@ ________________________________
 
 6) Написать функцию которая выдаст список тестов для переданного в неё web-ui элемента
 Элементы: Phone number field, CheckBox, SignIn Button.
+
 7) Написать функцию которая на вход получает JSON а возвращяет XML
+
+function jsonToxml(json_obj) {
+    var xml = "<root>";
+    for (var key in json_obj) {
+        if (json_obj.hasOwnProperty(key)) {
+            xml += "<" + key + ">" + json_obj[key] + "</" + key + ">";
+        }
+    }
+    xml += "</root>";
+    return xml;
+  }
+  
+  var json_obj = {name: "Max", age: 25, city: "Berlin"};
+  console.log(jsonToxml(json_obj));
+
 
 
 
